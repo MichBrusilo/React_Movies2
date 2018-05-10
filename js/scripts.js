@@ -93,10 +93,10 @@ var MovieList = React.createClass({
   	render: function() {
     	var moviesElements = movies.map(function(movie){
       		return React.createElement('li', {key: movie.id},
-      React.createElement('h2', {}, movie.title),
-      React.createElement('p', {}, movie.desc),
-      React.createElement('p', {}, movie.genre),
-      React.createElement('img', {src: movie.src})                       
+      React.createElement(MovieTitle, { title: movie.title }),
+      React.createElement(MovieDesc, { desc: movie.desc }),
+      React.createElement(MovieGenre, { genre: movie.genre}),
+      React.createElement(MovieImg, {src: movie.src})                       
     );
     	});
 
